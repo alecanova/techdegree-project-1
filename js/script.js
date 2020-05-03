@@ -54,17 +54,19 @@ let quotes = [
     year: 2017
   }
 ];
-
+ 
 
 /***
  * `getRandomQuote` function
 ***/
-
-
+function getRandomQuote(array){
+  let randomQuote = Math.floor(Math.random() * quotes.length) + 1;
+  return randomQuote;
+}
 
 /***
- * `printQuote` function
-***/
+ * getRandomColor function
+ **/
 
 
 
