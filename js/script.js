@@ -13,11 +13,12 @@ project 1 - A Random Quote Generator
 let quotes = [
   {
     quote: "If I could say it in words there would be no reason to paint.",
-    source: "Edward Hopper"
+    source: "Edward Hopper",
+    profession: "Painter"
   },
   {
     quote: "Play by the rules, but be ferocious.",
-    source: "Phil Knight"
+    source: "Phil Knight",
   },
   {
     quote: "There's no way around hard work. Embrace it.",
@@ -39,7 +40,7 @@ let quotes = [
   },
   {
     quote: "As soon as you start talking about mistique, you have none.",
-    source: "Neil Young"
+    source: "Neil Young",
   },
   {
     quote: "For me it's all about performance. Nothing good happens in the world by being happy and cosy. Nobody achieves anything great because they're happy and cosy.",
@@ -59,12 +60,11 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
-function getRandomQuote(){
-  let randomQuote = Math.floor(Math.random() * quotes.length) + 1;
-  return randomQuote;
+function getRandomQuote(array){
+  let quotesIndex = Math.floor(Math.random() * quotes.length);
+  return array[quotesIndex];
 }
-
-/***
+ /***
  * getRandomColor function
  **/
 function getRandomColor(){
@@ -74,7 +74,29 @@ function getRandomColor(){
   let colors = `rgba(${red},${green},${blue})`;
   return colors;
 }
-console.log(getRandomColor());
+
+/*** 
+ *  printQuote function
+ **/
+
+function printQuote(){
+   let printObject = getRandomQuote(quotes);
+   let randomColor = getRandomColor();
+   let message = '';
+   message += `<p class="quote">${printObject.quote}</p>`;
+   message += `<p class="source">${printObject.source} `;
+   if(printObject.citation !== undefined){
+    message += `<span class="citation">${printObject.citation}</span>`;
+   }
+   if(printObject.year !== undefined){
+    message += `<span class="year">${printObject.year}</span>`;
+   }
+   message += `</p>`;
+   document.getElementById('quote-box').innerHTML = message;
+   document.body.style.backgroundColor = randomColor;
+}
+
+
 
 /***
  * click event listener for the print quote button
