@@ -17,7 +17,7 @@ let quotes = [
   },
   {
     quote: "Play by the rules, but be ferocious.",
-    source: "Phil Knight",
+    source: "Phil Knight"
   },
   {
     quote: "There's no way around hard work. Embrace it.",
@@ -39,7 +39,7 @@ let quotes = [
   },
   {
     quote: "As soon as you start talking about mistique, you have none.",
-    source: "Neil Young",
+    source: "Neil Young"
   },
   {
     quote: "For me it's all about performance. Nothing good happens in the world by being happy and cosy. Nobody achieves anything great because they're happy and cosy.",
