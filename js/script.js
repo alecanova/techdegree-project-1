@@ -13,8 +13,7 @@ project 1 - A Random Quote Generator
 let quotes = [
   {
     quote: "If I could say it in words there would be no reason to paint.",
-    source: "Edward Hopper",
-    profession: "Painter"
+    source: "Edward Hopper"
   },
   {
     quote: "Play by the rules, but be ferocious.",
