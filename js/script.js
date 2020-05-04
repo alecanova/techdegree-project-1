@@ -8,7 +8,7 @@ project 1 - A Random Quote Generator
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 /*** 
- * `quotes` array 
+ * 'quotes' array containing 8 quotes.
 ***/
 let quotes = [
   {
@@ -58,14 +58,14 @@ let quotes = [
  
 
 /***
- * `getRandomQuote` function
+ * `getRandomQuote` function: it provides a random quote within the 'quotes' array.
 ***/
 function getRandomQuote(array){
   let quotesIndex = Math.floor(Math.random() * quotes.length);
   return array[quotesIndex];
 }
- /***
- * getRandomColor function
+ /***.
+ * getRandomColor function: it applies a random color anytime you click the 'show another quote' button.
  **/
 function getRandomColor(){
   let red = Math.floor(Math.random() * 256);
@@ -80,18 +80,23 @@ function getRandomColor(){
  **/
 
 function printQuote(){
+  // assigning variables to the functions
    let printObject = getRandomQuote(quotes);
    let randomColor = getRandomColor();
-   let message = '';
+   // displaying the 'message' with template literals
+   let message = ``;
    message += `<p class="quote">${printObject.quote}</p>`;
-   message += `<p class="source">${printObject.source} `;
+   message += `<p class="source">${printObject.source}`;
+  //  if statements to check if the quote contains the 'citation' or 'year' property.
    if(printObject.citation !== undefined){
     message += `<span class="citation">${printObject.citation}</span>`;
    }
    if(printObject.year !== undefined){
     message += `<span class="year">${printObject.year}</span>`;
    }
+   // closing <p> tag
    message += `</p>`;
+   // updating the HTML content
    document.getElementById('quote-box').innerHTML = message;
    document.body.style.backgroundColor = randomColor;
 }
