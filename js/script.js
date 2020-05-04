@@ -59,7 +59,7 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
-function getRandomQuote(array){
+function getRandomQuote(){
   let randomQuote = Math.floor(Math.random() * quotes.length) + 1;
   return randomQuote;
 }
@@ -67,8 +67,14 @@ function getRandomQuote(array){
 /***
  * getRandomColor function
  **/
-
-
+function getRandomColor(){
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  let colors = `rgba(${red},${green},${blue})`;
+  return colors;
+}
+console.log(getRandomColor());
 
 /***
  * click event listener for the print quote button
