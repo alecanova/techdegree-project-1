@@ -1,3 +1,4 @@
 # techdegree-project-1
  A Random Quote Generator
-Extra activity: created a randomColor function
+
+This is an app that displays random famous quotes each time a button is clicked.
