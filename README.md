@@ -2,3 +2,8 @@
  A Random Quote Generator
 
 This is an app that displays random famous quotes each time a button is clicked.
+
+# Technologies
+- HTML
+- CSS
+- JavaScript
